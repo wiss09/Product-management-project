@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Product Manajement</title>
+</head>
+
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>Product Management</h2>
+        </div>
+        <div class="inputs">
+            <input type="text" placeholder="title" id="title">
+            <div class="price">
+
+                <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+                <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+                <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+                <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+                <small type="number" id="total"></small>
+            </div>
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="catagory" id="catagory">
+            <button  id="submit" type="submit" onclick="createPro()">Create</button>
+        </div>
+        <div class="ouputs">
+            <div class="searchBlock">
+                <input onkeyup="search(this.value.toLowerCase())" type="text" placeholder="Search here..." id="search">
+                <div id="btnDelete">
+                    
+                </div>  
+            </div>
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <TH>TITLE</TH>
+                    <th>PRICE</th>
+                    <th>TAXES</th>
+                    <th>ADS</th>
+                    <th>DISCOUNT</th>
+                    <th>TOTAL</th>
+                    <th>CATAGORY</th>
+                    <th>UPDATE</th>
+                    <th>DELETE</th>
+                </thead>
+                <tbody id="table">
+                    <script>
+                        read()
+                    </script>
+                </tbody>    
+                    
+            </table>
+
+        </div>
+    </div>
+</body>
+
+</html>
